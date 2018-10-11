@@ -114,12 +114,10 @@ public class JFrame_dictionary extends javax.swing.JFrame {
         
         a=new Word("abc","sdasdfdffdfrf");
         arr.add(a);
-        a=new Word("bc","sdasdfdffdfrf");
-        arr.add(a);
+        
         a=new Word("bcerwerwe","sda23432432sdfdffdfrf");
         arr.add(a);
-        a=new Word("con","sdas234234234dfdffdfrf");
-        arr.add(a);
+        
         a=new Word("demeje","sdasdfdffd234234234frf");
         arr.add(a);
         a=new Word("deonha","sdasdfdffd2342342343frf");
