@@ -5,8 +5,11 @@
  */
 package dictionary;
 
+import java.io.File;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JScrollBar;
+
 
 /**
  *
@@ -31,11 +34,11 @@ public class JFrame_dictionary extends javax.swing.JFrame {
     private void initComponents() {
 
         in_dic = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        out_dic = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        list = new javax.swing.JScrollPane();
         list_word = new javax.swing.JList<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        out_dic = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 153, 255));
@@ -56,45 +59,54 @@ public class JFrame_dictionary extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane2.setViewportView(out_dic);
-
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 51));
         jLabel1.setText("TỪ ĐIỂN ANH VIỆT");
 
+        list.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        list_word.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        list_word.setForeground(new java.awt.Color(0, 0, 153));
+        list_word.setVerifyInputWhenFocusTarget(false);
         list_word.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
             public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
                 list_wordValueChanged(evt);
             }
         });
-        jScrollPane3.setViewportView(list_word);
+        list.setViewportView(list_word);
+
+        out_dic.setEditable(false);
+        out_dic.setColumns(20);
+        out_dic.setRows(5);
+        jScrollPane1.setViewportView(out_dic);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(in_dic)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2))
+                .addGap(181, 181, 181)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(138, 138, 138)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(list, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                    .addComponent(in_dic))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(in_dic, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                        .addComponent(in_dic, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane2)))
+                        .addComponent(list, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1)))
         );
 
         pack();
@@ -105,30 +117,14 @@ public class JFrame_dictionary extends javax.swing.JFrame {
     }//GEN-LAST:event_in_dicActionPerformed
     private DefaultListModel<String> data;
     private ArrayList<Word> arr;
+   
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         data =new DefaultListModel<>();
         list_word.setModel(data);
-        arr =new ArrayList<>();
-        Word a=new Word("a","sdasdad");
-        arr.add(a);
+        DictionaryManagement nhapdulieu =new  DictionaryManagement();
+        nhapdulieu.insertFromFile();
+        arr =nhapdulieu.getData();
         
-        a=new Word("abc","sdasdfdffdfrf");
-        arr.add(a);
-        
-        a=new Word("bcerwerwe","sda23432432sdfdffdfrf");
-        arr.add(a);
-        
-        a=new Word("demeje","sdasdfdffd234234234frf");
-        arr.add(a);
-        a=new Word("deonha","sdasdfdffd2342342343frf");
-        arr.add(a);
-        a=new Word("hien","sdasdfdffdf34234234rf");
-        arr.add(a);
-        a=new Word("psdfsd","sdasdfdffdfrf");
-        arr.add(a);
-        a=new Word("dfsdfs","sdasdfdff23423423dfrf");
-        arr.add(a);a=new Word("abc","sdasdfdff34234234dfrf");
-        arr.add(a);
         
         for(int i=0;i<arr.size();i++)
         {
@@ -140,13 +136,17 @@ public class JFrame_dictionary extends javax.swing.JFrame {
     private void in_dicKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_in_dicKeyTyped
         String text = in_dic.getText().trim();
         text+=evt.getKeyChar();
-        text=text.trim();
+        text=text.trim().toLowerCase();
         for(int i=0;i<data.size();i++)
         {
             String  val=""+data.getElementAt(i);
+            val=val.toLowerCase();
             if(val.startsWith(text))
             {
                 list_word.setSelectedIndex(i);
+                
+               JScrollBar keo = list.getVerticalScrollBar();
+               keo.setValue(i*21);
                 return;
             }
         }
@@ -160,7 +160,11 @@ public class JFrame_dictionary extends javax.swing.JFrame {
         {
             int index = list_word.getSelectedIndex();
             Word a = arr.get(index);
-            out_dic.setText(a.getWord_explain());
+                  out_dic.setText("<font color = red>"+(String) a.getWord_explain().get(0)+"</font>>\n");
+            for(int i=1;i<a.word_explain.size();i++)
+            {
+            out_dic.append((String) a.getWord_explain().get(i)+"\n");
+            }
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_list_wordValueChanged
@@ -203,9 +207,9 @@ public class JFrame_dictionary extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField in_dic;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane list;
     private javax.swing.JList<String> list_word;
-    private javax.swing.JTextPane out_dic;
+    private javax.swing.JTextArea out_dic;
     // End of variables declaration//GEN-END:variables
 }
