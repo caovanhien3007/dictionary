@@ -28,6 +28,7 @@ Khi chạy hàm Main sẽ hiện ra 1  bảng gồm 6 chức năng:
 
  	                                         #Phần đồ họa
 1.Class để chạy đồ họa: JFrame_dictionary
+#
 2. phần dữ liệu: file Data.txt
 
 
