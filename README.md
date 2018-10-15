@@ -1,7 +1,7 @@
 # dictionary
 thực hiện bởi Cao Văn Hiển phần đồ họa Trần Ngọc Hải phần Commandline
 
-               #Cách chạy  Commandline 
+                                         #Cách chạy  Commandline 
 1.	Class Word:
 -	Tạo ra 2 thuộc tính là word_target và word_explain
 -	Tạo ra phương thức getter và setter cho 2 thuộc tính trên
@@ -24,9 +24,11 @@ Khi chạy hàm Main sẽ hiện ra 1  bảng gồm 6 chức năng:
 -	Khi bấm số 5 sẽ là chức năng xóa từ. Sau đó sẽ là nhập vào từ mà mình muốn xóa
 -	Khi bấm số 6 sẽ thoát khỏi chương trình từ điển
 
- 	
 
 
+ 	                                         #Phần đồ họa
+1.Class để chạy đồ họa: JFrame_dictionary
+2. phần dữ liệu: file Data.txt
 
 
 
