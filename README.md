@@ -1,10 +1,10 @@
 # dictionary
 thực hiện bởi Cao Văn Hiển phần đồ họa Trần Ngọc Hải phần Commandline
-                                               Cách chạy  Commandline 
+
+               #Cách chạy  Commandline 
 1.	Class Word:
 -	Tạo ra 2 thuộc tính là word_target và word_explain
 -	Tạo ra phương thức getter và setter cho 2 thuộc tính trên
-#
 2.	Class Dictionary:
 -	Lưu trữ mảng Word
 3.	Class Dictionarymanagement:
@@ -15,8 +15,6 @@ thực hiện bởi Cao Văn Hiển phần đồ họa Trần Ngọc Hải phầ
 -	Thực hiện các hàm showAllWords, dictionarybasic, dictionaryAdvanced
 5.	Class Main1:
 -	Chứa hàm Main
-
-
 6.	Cách chạy hàm Main
 Khi chạy hàm Main sẽ hiện ra 1  bảng gồm 6 chức năng:
 -	Khi bấm số 1 sẽ là chức năng tra 1 từ tiếng anh sang tiếng việt
