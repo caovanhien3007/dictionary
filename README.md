@@ -1,7 +1,6 @@
 # dictionary
-thực hiện bởi 
-Cao Văn Hiển phần đồ họa
-Trần Ngọc Hải phần Commandline
+thực hiện bởi Cao Văn Hiển phần đồ họa Trần Ngọc Hải phần Commandline
+                                               Cách chạy  Commandline 
 1.	Class Word:
 -	Tạo ra 2 thuộc tính là word_target và word_explain
 -	Tạo ra phương thức getter và setter cho 2 thuộc tính trên
