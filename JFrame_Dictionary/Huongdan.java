@@ -45,7 +45,7 @@ public class Huongdan extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 10, 400, 220);
+        jScrollPane1.setBounds(10, 20, 400, 190);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 204));
@@ -58,9 +58,10 @@ public class Huongdan extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(160, 270, 101, 27);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dictionary/ok.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, 11, 0, 1);
+        jLabel1.setBounds(0, 0, 430, 340);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

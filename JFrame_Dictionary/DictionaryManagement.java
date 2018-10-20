@@ -42,7 +42,7 @@ public  void   insertFromFile()
                 while(!q.isEmpty())
                         {
 
-                            if(b<22)
+                            if(b<24)
                             a.add(q);
                            
                             b++;
@@ -92,7 +92,7 @@ public void  dictionaryExportToFile(ArrayList<Word> arr) throws IOException
         }
 
     }
-public void out_data(){
+public void out_data(ArrayList<Word> arr){
      for(int i=0;i<arr.size();i++)
         {
             System.out.println("-------------"+arr.get(i).getWord_target()+"-----------------------------------");
@@ -160,26 +160,9 @@ public void addNewWord(ArrayList<Word> arr,Word a) throws IOException
         nhapdulieu.dictionaryExportToFile(arr);
                 
 }
-public ArrayList loopsa(ArrayList<Word> arr){
-    for(int i=0;i<arr.size();i++)
-    {
-        
-        //System.out.println(arr.get(i).getWord_target());
-      ArrayList< String> s = arr.get(i).getWord_explain();
-      
-        if(s.size()==1)
-        {
-             System.out.println(arr.get(i).getWord_target());
-            arr.remove(i);
-          
-        //}
-            
-        
-    }
-    }
-    return arr;
-}
-    
+
+
+
     }
 
 

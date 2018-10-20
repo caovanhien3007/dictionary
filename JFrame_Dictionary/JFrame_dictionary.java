@@ -91,20 +91,20 @@ public class JFrame_dictionary extends javax.swing.JFrame {
             }
         });
         jPanel1.add(phatAm);
-        phatAm.setBounds(300, 110, 250, 30);
+        phatAm.setBounds(300, 90, 320, 50);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
         jLabel3.setText("Phát âm :");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(230, 110, 69, 30);
+        jLabel3.setBounds(230, 90, 69, 50);
 
         list.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         list_word.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         list_word.setForeground(new java.awt.Color(0, 0, 204));
         list_word.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { " ", " ", " ", " ", " Đang tải dữ liệu ..............", "       ", "       ", " ", " ", " " };
+            String[] strings = { " ", " ", " ", " Đang tải dữ liệu ..............", " ", " ", " ", " ", " " };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -142,12 +142,12 @@ public class JFrame_dictionary extends javax.swing.JFrame {
         jScrollPane1.setViewportView(out_dic);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(230, 170, 320, 410);
+        jScrollPane1.setBounds(230, 170, 390, 410);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dictionary/ok.png"))); // NOI18N
         jLabel4.setText("jLabel4");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(0, 0, 560, 580);
+        jLabel4.setBounds(0, 0, 620, 580);
 
         jMenuBar1.setBackground(new java.awt.Color(153, 255, 255));
         jMenuBar1.setForeground(new java.awt.Color(102, 102, 102));
@@ -213,7 +213,7 @@ public class JFrame_dictionary extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 554, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,8 +293,7 @@ public class JFrame_dictionary extends javax.swing.JFrame {
          data.remove(Index);
              try {
                  nhapdulieu.dictionaryExportToFile(arr);
-             } catch (IOException ex) {
-                 Logger.getLogger(JFrame_dictionary.class.getName()).log(Level.SEVERE, null, ex);
+             } catch (IOException e) {
              }
          out_dic.setText("BẠN ĐÃ XÓA THÀNH CÔNG "+ s);
          phatAm.setText("");

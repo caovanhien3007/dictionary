@@ -25,15 +25,11 @@ public class Dictionary {
         a.getData();
         //a.setdata();
         ArrayList<Word> arr= new ArrayList(a.getData());
-       
-      //  System.out.println(arr.get(2).getWord_target());
-       arr = a.loopsa(arr);
-         System.out.println("nhap tu ban muon dich");
-        a.dictionaryExportToFile(arr);
+     //  a.dictionaryExportToFile(arr);
+      //a.out_data(arr);
        //Scanner nhap =new Scanner(System.in);
        //String S= nhap.nextLine();
          //  a.lookUp(S,arr);
-       
        // ArrayList<String> nee =new ArrayList();
         //nee.add("gdfghfghfghf");
        //Word neew=new Word("a dfdgdfd",nee);
