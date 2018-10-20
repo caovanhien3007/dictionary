@@ -1,16 +1,41 @@
-package Command;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dictionary;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
-*
-* @author tuann_000 & dtt
-*/
-import java.util.ArrayList;
+ *
+ * @author user56
+ */
+public class Dictionary {
 
-public class Dictionary extends Word{
-	public ArrayList<Word> dict = new ArrayList<Word>();
-	public void addWord(String w1, String w2) {
-		Word w = new Word();
-		w.setWord(w1, w2);
-		this.dict.add(w);
-	}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+        // TODO code application logic here
+        DictionaryManagement a= new DictionaryManagement();
+        a.insertFromFile();
+        a.getData();
+        //a.setdata();
+        ArrayList<Word> arr= new ArrayList(a.getData());
+     //  a.dictionaryExportToFile(arr);
+      //a.out_data(arr);
+       //Scanner nhap =new Scanner(System.in);
+       //String S= nhap.nextLine();
+         //  a.lookUp(S,arr);
+       // ArrayList<String> nee =new ArrayList();
+        //nee.add("gdfghfghfghf");
+       //Word neew=new Word("a dfdgdfd",nee);
+      //a.addNewWord(arr, neew);
+       
+              
+    }
+
 }

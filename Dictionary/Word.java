@@ -3,43 +3,44 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package dictionary;
 
-package Command;
+import java.util.ArrayList;
+
 
 /**
-*
-* @author tuann_000 & dtt
-*/
+ *
+ * @author user56
+ */
 public class Word {
-   public  String word_target;
-   public  String word_explain;
+    String word_target ;
+         ArrayList<String>   word_explain  ;
+    
 
+    public Word(String word_target, ArrayList word_explain) {
+        this.word_target = word_target;
+        this.word_explain = word_explain;
+        
+    }
+
+    public Word() {
+    }
+
+    public String getWord_target() {
+        return word_target;
+    }
+
+    public void setWord_target(String word_target) {
+        this.word_target = word_target;
+    }
+
+    public ArrayList getWord_explain() {
+        return word_explain;
+    }
+
+    public void setWord_explain(ArrayList word_explain) {
+        this.word_explain = word_explain;
+    }
    
-   public String getWord_target() {
-	return word_target;
+    
 }
-
-
-public void setWord_target(String word_target) {
-	this.word_target = word_target;
-}
-
-
-public String getWord_explain() {
-	return word_explain;
-}
-
-
-public void setWord_explain(String word_explain) {
-	this.word_explain = word_explain;
-}
-
-
-public void setWord(String w1, String w2) {
-   	this.word_target = w1;
-   	this.word_explain = w2;
-   }
-}
-
-
-
