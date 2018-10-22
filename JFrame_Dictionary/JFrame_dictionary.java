@@ -230,7 +230,7 @@ public class JFrame_dictionary extends javax.swing.JFrame {
     }//GEN-LAST:event_in_dicActionPerformed
     private DefaultListModel<String> data;
     private ArrayList<Word> arr;
-    private ArrayList<Word> newarr;
+  //  private ArrayList<Word> newarr;
     private int Index;
     private int a=1;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -342,18 +342,29 @@ public class JFrame_dictionary extends javax.swing.JFrame {
        
          }
       JOptionPane.showMessageDialog(null, "Thêm từ thành công");
-      this.setVisible(false);
-      JFrame_dictionary jf=new JFrame_dictionary();
-      jf.setVisible(true);
+      
               
         newWord.setWord_explain(neew);
        
-        try {
-            nhapdulieu.addNewWord(arr, newWord);
-        } catch (IOException ex) {
-            Logger.getLogger(JFrame_dictionary.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
+           try {
+               arr = nhapdulieu.addNewWord(arr, newWord);
+           } catch (IOException ex) {
+              
+           }
+            for(int i=0;i<arr.size();i++)
+       {
+           if(newWord.getWord_target()==arr.get(i).getWord_target())
+           {
+               data.add(i, newWord.getWord_target());
+              list_word.setSelectedIndex(i);
+              JScrollBar keo=list.getVerticalScrollBar();
+               keo.setValue(i*21-14);
+                return;
+           }
        }
+       }
+      
        } 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 

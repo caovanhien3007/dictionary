@@ -82,9 +82,6 @@ public void  dictionaryExportToFile(ArrayList<Word> arr) throws IOException
                     }
                    bw.newLine();
                 }
-              //      f.println(out_pane.getText());
-            // bf.newLine();
-
                  bw.close();
         }catch(Exception e)
         {
@@ -137,7 +134,7 @@ public void lookUp(String S,ArrayList<Word> arr)
                     System.out.println( "bạn nhập sai hoặc từ điển chưa cập nhật");
                     }
         }
-public void addNewWord(ArrayList<Word> arr,Word a) throws IOException
+public  ArrayList addNewWord(ArrayList<Word> arr,Word a) throws IOException
 {
      int firt=0;int last =arr.size();
       int n=(firt+last)/2;
@@ -158,6 +155,7 @@ public void addNewWord(ArrayList<Word> arr,Word a) throws IOException
        arr.add(firt+1,a);
        DictionaryManagement nhapdulieu =new  DictionaryManagement();
         nhapdulieu.dictionaryExportToFile(arr);
+        return arr;
                 
 }
 
