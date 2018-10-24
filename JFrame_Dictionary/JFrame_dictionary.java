@@ -112,8 +112,6 @@ public class JFrame_dictionary extends javax.swing.JFrame {
         jPanel1.add(jLabel3);
         jLabel3.setBounds(230, 90, 69, 50);
 
-        list.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
         list_word.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         list_word.setForeground(new java.awt.Color(0, 0, 204));
         list_word.setModel(new javax.swing.AbstractListModel<String>() {
