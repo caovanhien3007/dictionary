@@ -49,8 +49,11 @@ public  void   insertFromFile()
 
                           q=infile.nextLine();
                         }
+                if(b>1&&!s.isEmpty())
+                {
             Word newword =new Word(s,a);
             arr.add(newword);
+                }
             }
 
             }catch(Exception e){
@@ -76,7 +79,7 @@ public void  dictionaryExportToFile(ArrayList<Word> arr) throws IOException
                    bw.newLine();
                 ArrayList<String> exp = arr.get(i).getWord_explain();
                     for(int j=0;j<exp.size();j++)
-                    {
+                    {  
                         bw.write(exp.get(j));
                         bw.newLine();
                     }

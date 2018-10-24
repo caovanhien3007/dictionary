@@ -33,7 +33,7 @@ public class Huongdan extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
@@ -41,7 +41,7 @@ public class Huongdan extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Xóa từ :chọn từ cần xóa rồi chọn Xóa từ\n\nThêm từ : chọn và thêm các thuộc tính của từ \n\nNhấn ctrl +r để khởi động lại từ điển\n\nNhấn ctrl +l dể xem số lượng từ trong từ điển\n\nDữ liệu tài điển \nData.txt.\n\n\n");
+        jTextArea1.setText("-Xóa từ :chọn từ cần xóa rồi chọn Xóa từ\n-Thêm từ : chọn và thêm các thuộc tính của từ\n-sửa từ chọn và sửa\n-lưu ý khi sửa và thêm từ điển sẽ không lưu phần nghĩa\nsau dòng trống \n-Nhấn ctrl +r để khởi động lại từ điển\n-Nhấn ctrl +l dể xem số lượng từ trong từ điển\n-Dữ liệu tài điển \nData.txt.\n\n\n");
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1);
